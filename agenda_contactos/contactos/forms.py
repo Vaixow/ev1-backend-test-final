@@ -5,7 +5,7 @@ import re
 class ContactoForm(forms.ModelForm):
     class Meta:
         model = Contacto
-        fields = ['nombre', 'telefono', 'correo', 'direccion']
+        fields = ['nombre', 'telefono', 'correo', 'direccion'] ##creamos el formulario desde el modelo creado anteriormente
 
     def clean_correo(self):
         correo = self.cleaned_data.get('correo')
