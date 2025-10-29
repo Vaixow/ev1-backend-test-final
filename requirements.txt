@@ -1,4 +1,5 @@
 django
 gunicorn
 whitenoise
-psycopg[binary,pool]
+psycopg
+python-dotenv[binary,pool]

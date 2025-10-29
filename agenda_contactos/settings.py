@@ -9,6 +9,12 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env
+load_dotenv()
+
 
 from pathlib import Path
 
@@ -26,8 +32,11 @@ SECRET_KEY = 'django-insecure-a!y07t_j-b0q&f5*8)ehs(0gq+-s3mr7=bcvmv%&v199snp#2h
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".onrender.com"
-]
+    ".onrender.com",
+    "127.0.0.1",
+
+] 
+
 
 
 # Application definition
@@ -76,9 +85,13 @@ WSGI_APPLICATION = 'agenda_contactos.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("dbname"),
+        "USER": os.getenv("user"),
+        "PASSWORD": os.getenv("password"),
+        "HOST": os.getenv("host"),
+        "PORT": os.getenv("port"),
     }
 }
 
