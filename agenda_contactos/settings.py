@@ -13,10 +13,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 
 from pathlib import Path
+import psycopg2
 from dotenv import load_dotenv
 import os
 
-# Load environment variables from .env
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,8 +33,7 @@ SECRET_KEY = 'django-insecure-a!y07t_j-b0q&f5*8)ehs(0gq+-s3mr7=bcvmv%&v199snp#2h
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".onrender.com",
-    "127.0.0.1",
+    ".onrender.com"
 ] 
 
 
