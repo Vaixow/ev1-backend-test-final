@@ -9,5 +9,3 @@ class ContactoAdmin(admin.ModelAdmin):
     ordering = ("nombre",)                                         # orden por nombre
     list_per_page = 25                                             # paginación de 25 registros por página
 
-    # Ejemplo de campo de solo lectura (puedes descomentar si lo deseas)
-    # readonly_fields = ("correo",)
