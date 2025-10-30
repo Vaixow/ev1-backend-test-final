@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 
-# Load environment variables from .env
+# Carga variables de entorno desde el .env
 load_dotenv()
 
 
@@ -93,6 +93,7 @@ DATABASES = {
         "PORT": os.getenv("port"),
     }
 }
+
 
 
 # Password validation
