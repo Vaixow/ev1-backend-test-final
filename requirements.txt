@@ -3,3 +3,4 @@ gunicorn
 whitenoise
 psycopg
 python-dotenv[binary,pool]
+psycopg2
