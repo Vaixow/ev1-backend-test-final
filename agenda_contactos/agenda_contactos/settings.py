@@ -25,7 +25,13 @@ SECRET_KEY = 'django-insecure-a!y07t_j-b0q&f5*8)ehs(0gq+-s3mr7=bcvmv%&v199snp#2h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD:agenda_contactos/agenda_contactos/settings.py
 ALLOWED_HOSTS = []
+=======
+ALLOWED_HOSTS = [
+    ".onrender.com"
+]
+>>>>>>> parent of 981a08b (feat):agenda_contactos/settings.py
 
 
 # Application definition
